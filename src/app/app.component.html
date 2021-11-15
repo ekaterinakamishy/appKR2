@@ -1,0 +1,14 @@
+<div class="menu">
+  <a routerLink="">Главный компонент</a> |
+  <a routerLink="posts">Посты</a>
+</div>
+<div *ngIf="LogIN === false">
+  <a routerLink="login">Авторизация</a> |
+  <a routerLink="register">Регистрация</a>
+</div>
+<div class="out" *ngIf="LogIN === true">
+  <button type="button" class="outlink" (click)="exit()">Выйти из аккаунта</button>
+</div>
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
